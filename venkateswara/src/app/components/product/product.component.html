@@ -1,0 +1,139 @@
+<!-- Header -->
+<header id="main-header" class="py-3 bg-primary text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1><i class="fa fa-cube" aria-hidden="true"></i> Products</h1>
+      </div>
+    </div>
+  </div>
+</header>
+<!--Search-->
+<section id="search" class="py-4 mb-4 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <a
+          href="#"
+          class="btn btn-success"
+          data-toggle="modal"
+          data-target="#addProductModal"
+          ><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Product</a
+        >
+      </div>
+      <div class="col-md-6 ml-auto">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search users...."
+          />
+          <div class="input-group-append">
+            <button class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Products-->
+<section id="products">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="text-warning">List of Products</h4>
+          </div>
+          <table class="table table-striped ">
+            <thead class="thead-dark">
+              <th>#</th>
+              <th>Name</th>
+              <th>Email</th>
+
+              <th></th>
+              <th></th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>jdoe@gmail.com</td>
+
+                <td><a href="#" class="btn btn-warning">Update</a></td>
+                <td><a href="#" class="btn btn-danger">Delete</a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Harry White</td>
+                <td>harry@gmail.com</td>
+
+                <td><a href="#" class="btn btn-warning">Update</a></td>
+                <td><a href="#" class="btn btn-danger">Delete</a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Mary johnson</td>
+                <td>mary@gmail.com</td>
+
+                <td><a href="#" class="btn btn-warning">Update</a></td>
+                <td><a href="#" class="btn btn-danger">Delete</a></td>
+              </tr>
+              <tr></tr>
+            </tbody>
+          </table>
+
+          <!-- Pagination-->
+          <nav class="ml-4">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a href="#" class="page-link">Previous</a>
+              </li>
+              <li class="page-item active">
+                <a href="#" class="page-link">1</a>
+              </li>
+              <li class="page-item">
+                <a href="#" class="page-link">2</a>
+              </li>
+              <li class="page-item">
+                <a href="#" class="page-link">3</a>
+              </li>
+              <li class="page-item">
+                <a href="#" class="page-link">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Add Product Modal-->
+<div class="modal fade" id="addProductModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">
+          Add Product
+        </h5>
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="title">Product Name</label>
+            <input type="text" class="form-control" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-dismiss="modal">
+          Save Changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

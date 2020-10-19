@@ -1,0 +1,258 @@
+<!-- Header -->
+<header id="main-header" class="py-3 bg-warning text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1><i class="fas fa-users"></i> Customers</h1>
+      </div>
+    </div>
+  </div>
+</header>
+<!--Search-->
+<section id="search" class="py-4 mb-4 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <a
+          href="#"
+          class="btn btn-success"
+          data-toggle="modal"
+          data-target="#addCustomerModal"
+          ><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Product</a
+        >
+      </div>
+      <div class="col-md-6 ml-auto">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search users...."
+          />
+          <div class="input-group-append">
+            <button class="btn btn-warning">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Users-->
+<section id="Customers">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="text-warning">List of Customers</h4>
+          </div>
+          <table class="table table-striped ">
+            <thead class="thead-dark">
+              <th>#</th>
+              <th>Name</th>
+              <th>Email</th>
+
+              <th></th>
+              <th></th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>jdoe@gmail.com</td>
+
+                <td><a href="#" class="btn btn-warning">Update</a></td>
+                <td><a href="#" class="btn btn-danger">Delete</a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Harry White</td>
+                <td>harry@gmail.com</td>
+
+                <td><a href="#" class="btn btn-warning">Update</a></td>
+                <td><a href="#" class="btn btn-danger">Delete</a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Mary johnson</td>
+                <td>mary@gmail.com</td>
+
+                <td><a href="#" class="btn btn-warning">Update</a></td>
+                <td><a href="#" class="btn btn-danger">Delete</a></td>
+              </tr>
+              <tr></tr>
+            </tbody>
+          </table>
+
+          <!-- Pagination-->
+          <nav class="ml-4">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a href="#" class="page-link">Previous</a>
+              </li>
+              <li class="page-item active">
+                <a href="#" class="page-link">1</a>
+              </li>
+              <li class="page-item">
+                <a href="#" class="page-link">2</a>
+              </li>
+              <li class="page-item">
+                <a href="#" class="page-link">3</a>
+              </li>
+              <li class="page-item">
+                <a href="#" class="page-link">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Add Customer Modal-->
+<div class="modal fade" id="addCustomerModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-warning text-white">
+        <h5 class="modal-title">
+          Add Customer
+        </h5>
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="title">FirstName</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="title">LastName</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="title">Phone Number</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="title">Gender</label><br />
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="male"
+                value="male"
+              />
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="female"
+                value="female"
+              />
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="state">State</label>
+            <select
+              name="state"
+              id="state"
+              class="form-control"
+              (change)="districtsUnderParticularState($event.target.value)"
+            >
+              <option value="">Select state</option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Andaman and Nicobar Islands"
+                >Andaman and Nicobar Islands</option
+              >
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Chandigarh">Chandigarh</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Dadar and Nagar Haveli"
+                >Dadar and Nagar Haveli</option
+              >
+              <option value="Daman and Diu">Daman and Diu</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Lakshadweep">Lakshadweep</option>
+              <option value="Puducherry">Puducherry</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+              <option value="Jharkhand">Jharkhand</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+              <option value="West Bengal">West Bengal</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="district">District</label>
+            <select
+              name="district"
+              id="district"
+              class="form-control"
+              (change)="mandalsUnderParticularDistrict($event.target.value)"
+            >
+              <option value="">Select district</option>
+              <option *ngFor="let district of districts" [value]="district">{{
+                district
+              }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mandal">Mandal</label>
+            <select
+              name="mandal"
+              id="mandal"
+              class="form-control"
+              (change)="villagesUnderParticularMandal($event.target.value)"
+            >
+              <option value="">Select mandal</option>
+              <option *ngFor="let mandal of mandals" [value]="mandal">{{
+                mandal
+              }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="village">Village</label>
+            <select name="village" id="village" class="form-control">
+              <option value="">Select village</option>
+              <option *ngFor="let village of villages" [value]="village">{{
+                village
+              }}</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-warning" data-dismiss="modal">
+          Save Changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

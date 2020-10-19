@@ -1,0 +1,15 @@
+#link {
+  text-decoration: none;
+  padding: 7.5px;
+  width: auto;
+  color: lavender;
+  background-color: #5bc0de;
+  border: 1px solid rgb(49, 164, 218);
+  text-align: left;
+  font-size: 1rem;
+}
+
+#link:hover {
+  color: #5bc0de;
+  background-color: lavenderblush;
+}

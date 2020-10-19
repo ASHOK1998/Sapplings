@@ -1,0 +1,87 @@
+<!-- Welcome page and Admin Dash Board-->
+
+<div class="mx-3 my-3">
+  <div class="row ">
+    <div class="col border border-primary">
+      <nav
+        class="navbar navbar-expand-sm  navbar-light bg-info "
+        style="height: 80px; font-size: larger;margin-left: -12.5px;margin-right: -12.5px;"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><i class="fas fa-pepper-hot"></i> Sapplings</a
+          >
+          <button
+            class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item mt-3 ">
+                <p
+                  class="text-secondary "
+                  style="font-size: 1rem;font-family:'Times New Roman', Times, serif;"
+                >
+                  <span style="color: black;">{{
+                    date | date: "fullDate"
+                  }}</span
+                  ><br />
+                  <span style="color: black;">{{
+                    date | date: "mediumTime"
+                  }}</span>
+                </p>
+              </li>
+              <li class="nav-item mt-3 ml-3">
+                <a class="nav-link" href="#" class="btn btn-dark btn-sm"
+                  ><span class="badge badge-info">0</span
+                  ><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item mt-3 ml-3">
+                <a class="nav-link" href="#" class="btn btn-dark btn-sm"
+                  >Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="row border border-primary h-auto">
+    <div
+      class="col-xl-2 border border-success bg-info d-flex flex-column m-0 p-2"
+    >
+      <a routerLink="/product" id="link" class="mb-1"
+        ><i class="fa fa-cube" aria-hidden="true"></i> Product</a
+      >
+      <a routerLink="/productType" id="link" class="mb-1"
+        ><i class="fa fa-cubes" aria-hidden="true"></i> Product Type</a
+      >
+      <a routerLink="/brand" id="link" class="mb-1"
+        ><i class="fa fa-briefcase" aria-hidden="true"></i> Brand</a
+      >
+      <a routerLink="/stock" id="link" class="mb-1"
+        ><i class="fa fa-balance-scale" aria-hidden="true"></i> Stock</a
+      >
+      <a href="#" id="link" class="mb-1"
+        ><i class="fa fa-book" aria-hidden="true"></i> Sales</a
+      >
+      <a routerLink="/customer" id="link" class="mb-1"
+        ><i class="fa fa-users" aria-hidden="true"></i> Customers</a
+      >
+      <a href="#" id="link"
+        ><i class="fa fa-calculator" aria-hidden="true"></i> Expendiature</a
+      >
+    </div>
+    <div class="col-xl-10 border border-success">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!-- Footer-->
+
+  <div class="row bg-info" style="height: 90px;"></div>
+</div>
